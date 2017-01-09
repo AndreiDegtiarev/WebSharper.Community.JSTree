@@ -1,5 +1,5 @@
 # WebSharper.Community.JSTree
-WebSharper extension for javascript tree view control jstree.js
+WebSharper extension for javascript tree view control jstree.js (https://www.jstree.com/)
 
 # Documentation and samples
 
