@@ -17,13 +17,17 @@ module Definition =
         } 
     let TreeNode =  Class "TreeNode"
     TreeNode  |+> Pattern.RequiredFields [
-                "id", T<string>
-                "text", T<string>
             ] |>ignore
     TreeNode |+> Pattern.OptionalFields [
+                "id", T<string>
+                //"text", T<string>
                 "state", TreeNodeState.Type
                 "children",  !| TreeNode.Type
             ] |>ignore
+    TreeNode|+> Instance [
+                "text" =@ T<string>
+                ] |>ignore
+
 
 
     let TreeCore =
@@ -75,8 +79,7 @@ module Definition =
                 Tree
             ]
             Namespace "WebSharper.Community.JSTree.Resources" [
-               // Resource "Extension3" "https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.3/jstree.min.js"
-                Resource "Extension3" "/Scripts/jstree.js"
+                Resource "JSTree" "https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.3/jstree.min.js"
                 |> fun r -> r.AssemblyWide()
             ]
         ]

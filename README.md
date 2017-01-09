@@ -1,2 +1,6 @@
 # WebSharper.Community.JSTree
-Tree view control jstree.js extension for WebSharper
+WebSharper extension for javascript tree view control jstree.js
+
+# Documentation and samples
+
+Look at Client.Main() in WebSharper.Community.JSTree.Sample to see how to use plugin.
